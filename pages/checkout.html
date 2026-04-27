@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Verve & Co.</title>
-  <meta name="description" content="Get in touch with Verve & Co. Our team is here to assist you with styling, orders, and more.">
+  <title>Checkout | Verve & Co.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body data-page="contact">
+
+<body data-page="checkout">
   <header>
     <a href="../index.html" class="logo">Verve & Co.</a>
     <nav>
@@ -20,7 +20,7 @@
         <li><a href="tops.html">Tops</a></li>
         <li><a href="dresses.html">Dresses</a></li>
         <li><a href="pants.html">Pants</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <button class="cart-toggle" aria-label="Open cart">
@@ -32,87 +32,141 @@
   <main>
     <section class="subpage-hero">
       <div class="subpage-hero-copy">
-        <p class="contact-kicker">Contact</p>
-        <h1>For questions, fittings, and pieces worth chasing down</h1>
-        <p>Need sizing guidance, order support, or a second opinion before you commit? Reach the team here. If you simply want first access to new drops, join the list and stay close.</p>
+        <h1>Checkout</h1>
+        <p>Review your selected pieces, confirm delivery details, and complete payment with a cleaner end-to-end flow.</p>
       </div>
     </section>
 
-      <div class="contact-content">
-        <div class="newsletter-section">
-          <h2>Stay Sharp</h2>
-          <p>Early access to new releases, private edits, and the kind of pieces that rarely need a second look.</p>
+    <section class="checkout-section">
+      <div class="checkout-content">
+        <div class="checkout-form-section">
+          <h2>Shipping Information</h2>
+          
+          <form class="checkout-form" id="checkoutForm">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" name="fullName" required>
+            </div>
 
-          <form class="newsletter-form">
-            <input type="text" placeholder="Your name" required>
-            <input type="email" placeholder="your@email.com" required>
-            <button type="submit">Join the List</button>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address" required>
+            </div>
+
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" name="city" required>
+            </div>
+
+            <div class="form-group">
+              <label for="state">State</label>
+              <input type="text" id="state" name="state" required>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" value="Nigeria" required>
+              </div>
+
+              <div class="form-group">
+                <label for="postalCode">Postal Code</label>
+                <input type="text" id="postalCode" name="postalCode" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="deliveryMethod">Delivery Method</label>
+              <select id="deliveryMethod" name="deliveryMethod" class="size-select" required>
+                <option value="">Select delivery</option>
+                <option value="standard">Standard Delivery</option>
+                <option value="express">Express Delivery</option>
+                <option value="pickup">Store Pickup</option>
+              </select>
+            </div>
+
+            <div class="color-hint-section">
+              <p>We have a favourite shade. Guess it and take 10% off your order.</p>
+              <div class="form-group" style="margin: 0;">
+                <label for="colorGuess">Enter Color Name (Optional)</label>
+                <input type="text" id="colorGuess" name="colorGuess" placeholder="Type the color name...">
+              </div>
+            </div>
+
+            <h2 style="margin-top: 2rem;">Payment Method</h2>
+            
+            <div class="form-group">
+              <label for="cardName">Name on Card</label>
+              <input type="text" id="cardName" name="cardName" required>
+            </div>
+
+            <div class="form-group">
+              <label for="cardNumber">Card Number</label>
+              <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" required>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+              <div class="form-group">
+                <label for="expiryDate">Expiry Date</label>
+                <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="123" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="orderNotes">Order Notes</label>
+              <textarea id="orderNotes" name="orderNotes" rows="4" placeholder="Delivery instructions, preferred contact time, or gift note"></textarea>
+            </div>
           </form>
         </div>
 
-        <div class="contact-form-section">
-          <h2>Get in Touch</h2>
-          <p>Tell us what you need. Sizing advice, delivery support, availability checks, or help choosing the stronger option.</p>
-
-          <form class="contact-form">
-            <div class="form-group">
-              <input type="text" placeholder="Your name" required>
-            </div>
-
-            <div class="form-group">
-              <input type="email" placeholder="your@email.com" required>
-            </div>
-
-            <div class="form-group">
-              <input type="text" placeholder="Subject" required>
-            </div>
-
-            <div class="form-group">
-              <textarea placeholder="What do you need help with?" rows="6" required></textarea>
-            </div>
-
-            <button type="submit">Send Message</button>
-          </form>
-        </div>
-
-        <div class="contact-info">
-          <div class="info-item">
-            <h3>Email</h3>
-            <p><a href="mailto:hello@verveandco.com">hello@verveandco.com</a></p>
-            <p>Orders, collaborations, and customer support.</p>
+        <div class="checkout-summary">
+          <h2>Order Summary</h2>
+          
+          <div class="order-items" id="orderItems">
+            <!-- Cart items will be inserted here by JavaScript -->
           </div>
 
-          <div class="info-item">
-            <h3>Studio</h3>
-            <p>Lagos, Nigeria</p>
-            <p>Private fittings by appointment.</p>
+          <div class="order-totals">
+            <div class="order-total-row">
+              <span>Subtotal</span>
+              <span id="subtotalAmount">₦0</span>
+            </div>
+            
+            <div class="order-total-row discount hidden" id="discountRow">
+              <span>Discount (10%)</span>
+              <span id="discountAmount">-₦0</span>
+            </div>
+            
+            <div class="order-total-row">
+              <span>Shipping</span>
+              <span>₦2,500</span>
+            </div>
+            
+            <div class="order-total-row final">
+              <span>Total</span>
+              <span id="totalAmount">₦2,500</span>
+            </div>
           </div>
 
-          <div class="info-item">
-            <h3>Hours</h3>
-            <p>Monday - Saturday: 10am - 6pm</p>
-            <p>Sunday: Closed</p>
-          </div>
+          <button type="submit" form="checkoutForm" class="place-order-btn">Place Order</button>
         </div>
       </div>
     </section>
-
-    <div class="page-navigation">
-      <a href="pants.html" class="prev-page">
-        <span class="page-nav-arrow">&larr;</span>
-        <div class="page-nav-content">
-          <span class="page-nav-label">Previous</span>
-          <span class="page-nav-title">Pants</span>
-        </div>
-      </a>
-      <a href="../index.html" class="next-page">
-        <div class="page-nav-content">
-          <span class="page-nav-label">Back to</span>
-          <span class="page-nav-title">Home</span>
-        </div>
-        <span class="page-nav-arrow">&rarr;</span>
-      </a>
-    </div>
   </main>
 
   <footer>
@@ -120,7 +174,7 @@
       <span class="footer-logo">Verve & Co.</span>
       <p class="footer-tagline">Clothes that understand you.</p>
     </div>
-
+    
     <nav class="footer-nav">
       <div class="footer-section">
         <h4>Shop</h4>
@@ -130,16 +184,16 @@
           <li><a href="pants.html">Pants</a></li>
         </ul>
       </div>
-
+      
       <div class="footer-section">
         <h4>Info</h4>
         <ul>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="#">Shipping &amp; Returns</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
           <li><a href="#">Care Instructions</a></li>
         </ul>
       </div>
-
+      
       <div class="footer-section">
         <h4>Connect</h4>
         <ul>
@@ -149,7 +203,7 @@
         </ul>
       </div>
     </nav>
-
+    
     <div class="footer-legal">
       <p>&copy; 2026 Verve & Co. All rights reserved.</p>
       <div class="legal-links">
