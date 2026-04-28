@@ -333,7 +333,7 @@ main {
   padding: var(--space-xl) var(--space-md);
   background:
     linear-gradient(180deg, rgba(10, 10, 10, 0.1) 0%, rgba(10, 10, 10, 0.78) 70%),
-    url('https://res.cloudinary.com/dnkfg07ov/image/upload/v1776868381/A_red_dress__My_design_with_the_help_of_artificial_intelligence__zddmq6.jpg');
+    url('https://res.cloudinary.com/dnkfg07ov/image/upload/v1776860464/cider_jacquard_floral_split_tube_top_cqxkms.jpg');
   background-size: cover;
   background-position: center 18%;
   position: relative;
@@ -617,7 +617,6 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(85, 107, 47, 0.85), rgba(62, 79, 35, 0.9));
   z-index: 1;
 }
 
