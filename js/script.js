@@ -16,11 +16,11 @@ const PAGE_KEY = document.body.dataset.page || (() => {
 })();
 
 const HERO_IMAGES = {
-  tops: 'https://res.cloudinary.com/dnkfg07ov/image/upload/v1776870866/download_10_tcj2vb.jpg',
-  dresses: 'https://res.cloudinary.com/dnkfg07ov/image/upload/v1776699489/download_51_hp5wdl.jpg',
-  pants: 'https://res.cloudinary.com/dnkfg07ov/image/upload/v1776689968/download_11_jrrj5v.jpg',
+  tops: 'https://res.cloudinary.com/dnkfg07ov/image/upload/v1776860462/download_60_jfzp3h.jpg',
+  dresses: 'https://res.cloudinary.com/dnkfg07ov/image/upload/v1777340532/Verve_Co._2_t8aoqj.png',
+  pants: 'https://res.cloudinary.com/dnkfg07ov/image/upload/v1776848386/download_43_rgokk7.jpg',
   checkout: 'https://res.cloudinary.com/dnkfg07ov/image/upload/v1776700993/download_56_oyuurl.jpg',
-  contact: 'https://res.cloudinary.com/dnkfg07ov/image/upload/v1776692085/tie-neck_slit_fitted_women_blouse_l6ef9b.jpg'
+  contact: 'https://res.cloudinary.com/dnkfg07ov/image/upload/v1776848104/Asymmetrical_Twist_Top_And_High_Waist_Maxi_Skirt_Set_cagn7u.jpg'
 };
 
 const FILTER_GROUPS = {
@@ -988,7 +988,7 @@ function initThemeToggle() {
   themeToggle.setAttribute('aria-label', 'Toggle Dark Mode');
   
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  themeToggle.innerHTML = isDark ? '<i class="fas fa-sun fa-lg"></i>' : '<i class="fas fa-moon fa-lg"></i>';
   
   const header = document.querySelector('header');
   const cartToggle = document.querySelector('.cart-toggle');
@@ -1004,8 +1004,8 @@ function initThemeToggle() {
     header.insertBefore(actionsWrap, mobileToggle || cartToggle);
     
     if (mobileToggle) actionsWrap.appendChild(mobileToggle);
-    actionsWrap.appendChild(themeToggle);
     actionsWrap.appendChild(cartToggle);
+    actionsWrap.appendChild(themeToggle);
   }
 
   themeToggle.addEventListener('click', () => {
@@ -1013,11 +1013,11 @@ function initThemeToggle() {
     if (currentlyDark) {
       document.documentElement.removeAttribute('data-theme');
       localStorage.setItem('verveTheme', 'light');
-      themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+      themeToggle.innerHTML = '<i class="fas fa-moon fa-lg"></i>';
     } else {
       document.documentElement.setAttribute('data-theme', 'dark');
       localStorage.setItem('verveTheme', 'dark');
-      themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+      themeToggle.innerHTML = '<i class="fas fa-sun fa-lg"></i>';
     }
   });
 }
