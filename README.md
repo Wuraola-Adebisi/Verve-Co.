@@ -1,14 +1,23 @@
-# Verve & Co. Frontend Guide
+# Verve & Co.
 
-## What This Project Is
+Verve & Co. is a polished fashion e-commerce concept built with HTML, CSS, and vanilla JavaScript. It presents a confident editorial storefront with product category pages, a slide-out cart, checkout flow, contact forms, and responsive navigation.
 
-This project is a multi-page frontend ecommerce storefront for **Verve & Co.**
+## Highlights
 
-It is currently built with:
+- Multi-page storefront for tops, dresses, pants, about, contact, and checkout
+- Branded visual system with custom typography, a refined color palette, and a favicon
+- Cart interactions powered by `localStorage`
+- Responsive product grids and mobile navigation
+- Editorial product copy and cohesive brand voice
 
-- Plain HTML for page structure
-- Plain CSS for layout and styling
-- Plain JavaScript for interaction and state
-- `localStorage` for cart and order persistence during frontend testing
+## Tech Stack
 
-The project is not yet using a backend, database, React, or Tailwind in production. Right now, it behaves like a polished frontend prototype with working shopping flow behavior.
+- HTML5
+- CSS3
+- Vanilla JavaScript
+- Google Fonts
+- Cloudinary-hosted product imagery
+
+## Portfolio Notes
+
+This project is useful as a portfolio piece because it shows layout design, brand direction, responsive UI work, e-commerce interaction patterns, and client-side state management without relying on a framework.
