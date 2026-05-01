@@ -5,7 +5,6 @@
 }
 
 :root {
-  /* Color Palette */
   --olive: #556B2F;
   --olive-dark: #3E4F23;
   --olive-light: #6B8E3D;
@@ -18,11 +17,9 @@
   --grey-light: #E5E5E5;
   --white: #FFFFFF;
   
-  /* Typography */
   --font-heading: 'Space Grotesk', sans-serif;
   --font-body: 'Manrope', sans-serif;
   
-  /* Spacing */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 2rem;
@@ -30,11 +27,9 @@
   --space-xl: 6rem;
   --space-xxl: 8rem;
   
-  /* Layout */
   --max-width: 1400px;
   --header-height: 80px;
   
-  /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-medium: 0.4s ease;
   --transition-slow: 0.6s ease;
@@ -53,7 +48,6 @@
   --grey-mid: #888888;
   --grey-dark: #DDDDDD;
   
-  /* We only override accents that need to be brighter in dark mode */
   --olive: #8CA35A;
   --olive-dark: #A5C075;
   --olive-light: #556B2F;
@@ -75,7 +69,6 @@
   top: 6px;
 }
 
-/* Reusable button classes */
 .btn-primary {
   padding: 1rem 2rem;
   background-color: var(--olive);
@@ -143,9 +136,6 @@ body.cart-open {
   overflow: hidden;
 }
 
-/* ========================================
-   TYPOGRAPHY
-   ======================================== */
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
@@ -185,9 +175,6 @@ a {
   text-decoration: none;
   transition: color var(--transition-fast);
 }
-/* ========================================
-   HEADER & NAVIGATION
-   ======================================== */
 
 header {
   position: fixed;
@@ -264,7 +251,6 @@ header nav a.active::after {
   width: 100%;
 }
 
-/* Cart Icon */
 .cart-toggle {
   position: relative;
   cursor: pointer;
@@ -313,18 +299,12 @@ header nav a.active::after {
   color: var(--olive);
 }
 
-/* ========================================
-   MAIN LAYOUT
-   ======================================== */
 
 main {
   margin-top: var(--header-height);
   min-height: calc(100vh - var(--header-height));
 }
 
-/* ========================================
-   HERO SECTION (HOME PAGE)
-   ======================================== */
 
 #hero {
   min-height: calc(100vh - var(--header-height));
@@ -496,9 +476,6 @@ main {
   color: var(--olive-dark);
 }
 
-/* ========================================
-   CATEGORIES PREVIEW (HOME PAGE)
-   ======================================== */
 
 .categories-preview {
   display: grid;
@@ -594,9 +571,6 @@ main {
   color: var(--black);
 }
 
-/* ========================================
-   CATEGORY HERO (TOPS, DRESSES, PANTS)
-   ======================================== */
 
 .category-hero {
   padding: var(--space-xl) var(--space-md);
@@ -642,9 +616,6 @@ main {
   color: rgba(255, 255, 255, 0.95);
 }
 
-/* ========================================
-   PRODUCT FILTERS
-   ======================================== */
 
 .product-filters {
   padding: 0 var(--space-md);
@@ -694,7 +665,6 @@ main {
   color: var(--grey-mid);
 }
 
-/* Filter dropdown styling is shared with select dropdown styling below. */
 .filter-select {
   width: 100%;
 }
@@ -723,9 +693,6 @@ main {
   line-height: 1;
 }
 
-/* ========================================
-   PRODUCTS GRID
-   ======================================== */
 
 .products-grid {
   display: grid;
@@ -834,10 +801,6 @@ main {
 .add-to-cart:hover {
   background-color: var(--olive);
 }
-
-/* ========================================
-   PRODUCT MODAL
-   ======================================== */
 
 .product-modal-overlay {
   position: fixed;
@@ -1114,9 +1077,7 @@ select option,
   background-color: var(--olive-dark);
 }
 
-/* ========================================
-   PAGINATION
-   ======================================== */
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -1167,9 +1128,6 @@ select option,
   color: var(--grey-dark);
 }
 
-/* ========================================
-   CART PANEL
-   ======================================== */
 
 .cart-overlay {
   position: fixed;
@@ -1368,10 +1326,6 @@ select option,
   background-color: var(--olive-dark);
 }
 
-/* ========================================
-   CHECKOUT PAGE
-   ======================================== */
-
 .checkout-section {
   padding: var(--space-xl) var(--space-md);
   max-width: 1200px;
@@ -1552,10 +1506,6 @@ select option,
   cursor: not-allowed;
 }
 
-/* ========================================
-   ABOUT PAGE
-   ======================================== */
-
 .about-section {
   padding: var(--space-xl) var(--space-md);
   max-width: 1000px;
@@ -1684,9 +1634,6 @@ select option,
   font-style: italic;
 }
 
-/* ========================================
-   CONTACT PAGE
-   ======================================== */
 
 .contact-section {
   padding: var(--space-xl) var(--space-md);
@@ -1837,9 +1784,6 @@ select option,
   text-decoration: underline;
 }
 
-/* ========================================
-   PAGE NAVIGATION
-   ======================================== */
 
 .page-navigation {
   display: flex;
@@ -1886,10 +1830,6 @@ select option,
   font-weight: 600;
   font-family: var(--font-heading);
 }
-
-/* ========================================
-   FOOTER
-   ======================================== */
 
 footer {
   background-color: var(--black);
@@ -1973,10 +1913,7 @@ footer {
 .legal-links a:hover {
   color: var(--white);
 }
-
-/* ========================================
-   SUCCESS MESSAGE
-   ======================================== */
+    
 
 .success-message {
   position: fixed;
@@ -1992,9 +1929,6 @@ footer {
   transition: opacity 0.3s ease;
 }
 
-/* ========================================
-   MEDIA QUERIES
-   ======================================== */
 
 @media (max-width: 1024px) {
   .contact-lead {
@@ -2165,9 +2099,6 @@ footer {
   }
 }
 
-/* ========================================
-   DARK MODE OVERRIDES
-   ======================================== */
 [data-theme="dark"] body {
   background-color: var(--theme-bg);
   color: var(--theme-text);
@@ -2253,8 +2184,6 @@ footer {
   background: linear-gradient(135deg, var(--theme-panel), var(--theme-bg));
 }
 
-
-/* Add to Cart button styling & animations */
 .add-to-cart {
   width: 100%;
   padding: 0.85rem;
