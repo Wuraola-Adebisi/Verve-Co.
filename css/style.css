@@ -390,13 +390,6 @@ main {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.hero-eyebrow::before {
-  content: '';
-  width: 42px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.7);
-}
-
 .hero-actions {
   display: flex;
   gap: var(--space-sm);
