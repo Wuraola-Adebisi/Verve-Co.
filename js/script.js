@@ -776,6 +776,7 @@ function initMobileNav() {
   button.className = 'mobile-menu-toggle';
   button.type = 'button';
   button.setAttribute('aria-label', 'Open navigation');
+  button.setAttribute('aria-expanded', 'false');
   button.innerHTML = '&#9776;';
   if (cartToggle) {
     header.insertBefore(button, cartToggle);
@@ -784,13 +785,19 @@ function initMobileNav() {
   }
 
   button.addEventListener('click', () => {
-    nav.classList.toggle('mobile-nav-open');
-    button.innerHTML = nav.classList.contains('mobile-nav-open') ? '&times;' : '&#9776;';
+    const isOpen = nav.classList.toggle('mobile-nav-open');
+    button.classList.toggle('menu-open', isOpen);
+    button.setAttribute('aria-expanded', String(isOpen));
+    button.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    button.innerHTML = isOpen ? '&times;' : '&#9776;';
   });
 
   nav.querySelectorAll('a').forEach((link) => {
     link.addEventListener('click', () => {
       nav.classList.remove('mobile-nav-open');
+      button.classList.remove('menu-open');
+      button.setAttribute('aria-expanded', 'false');
+      button.setAttribute('aria-label', 'Open navigation');
       button.innerHTML = '&#9776;';
     });
   });
@@ -798,6 +805,9 @@ function initMobileNav() {
   const syncMenuState = () => {
     if (window.innerWidth > 768) {
       nav.classList.remove('mobile-nav-open');
+      button.classList.remove('menu-open');
+      button.setAttribute('aria-expanded', 'false');
+      button.setAttribute('aria-label', 'Open navigation');
       button.innerHTML = '&#9776;';
     }
   };
