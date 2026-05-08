@@ -317,7 +317,7 @@ main {
   display: grid;
   align-items: stretch;
   padding: var(--space-xl) var(--space-md) var(--space-md);
-background: linear-gradient(90deg, #ffffff 0%, #ffffff 58%, #eef1ea 58%, #eef1ea 100%);
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 58%, var(--khaki) 58%, var(--khaki) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -427,7 +427,7 @@ background: linear-gradient(90deg, #ffffff 0%, #ffffff 58%, #eef1ea 58%, #eef1ea
 .hero-image-main {
   inset: 0 8% 5% 0;
   border: 1px solid #0A0A0A;
- box-shadow: 14px 14px 0 rgba(85, 107, 47, 0.18);
+ box-shadow: 14px 14px 0 var(--olive-light);
 }
 
 .hero-image-accent {
