@@ -377,18 +377,6 @@ main {
   color: #2A2A2A;
 }
 
-.hero-eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  margin-bottom: var(--space-md);
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: #3E4F23;
-  font-weight: 800;
-}
-
 .hero-actions {
   display: flex;
   gap: var(--space-sm);
