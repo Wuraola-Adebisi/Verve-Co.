@@ -317,7 +317,7 @@ main {
   display: grid;
   align-items: stretch;
   padding: var(--space-xl) var(--space-md) var(--space-md);
-  background: linear-gradient(90deg, #ffffff 0%, #ffffff 58%, #f3efe6 58%, #f3efe6 100%);
+background: linear-gradient(90deg, #ffffff 0%, #ffffff 58%, #eef1ea 58%, #eef1ea 100%);
   position: relative;
   overflow: hidden;
 }
@@ -427,7 +427,7 @@ main {
 .hero-image-main {
   inset: 0 8% 5% 0;
   border: 1px solid #0A0A0A;
-  box-shadow: 14px 14px 0 #d9cdb8;
+ box-shadow: 14px 14px 0 rgba(85, 107, 47, 0.18);
 }
 
 .hero-image-accent {
@@ -435,7 +435,7 @@ main {
   bottom: 0;
   width: min(44%, 260px);
   aspect-ratio: 3 / 4;
-  border: 8px solid #f3efe6;
+ border: 8px solid #eef1ea;
   box-shadow: 0 0 0 1px var(--black);
 }
 
