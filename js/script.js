@@ -1046,16 +1046,21 @@ function initHeaderScroll() {
 }
 
 function initPageTransitions() {
-  // Page load transition
   document.body.classList.add('page-transitioning');
   window.requestAnimationFrame(() => {
     document.body.classList.remove('page-transitioning');
   });
 
-  document.addEventListener('click', e => {
-    const link = e.target.closest('a');
+  window.addEventListener('pageshow', (event) => {
+    if (event.persisted) {
+      document.body.classList.remove('page-transitioning');
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a');
     if (link && link.href && link.hostname === window.location.hostname && !link.hash && link.target !== '_blank') {
-      e.preventDefault();
+      event.preventDefault();
       document.body.classList.add('page-transitioning');
       setTimeout(() => {
         window.location.href = link.href;
@@ -1063,6 +1068,7 @@ function initPageTransitions() {
     }
   });
 }
+ 
 
 document.addEventListener('DOMContentLoaded', () => {
   ensureCartShell();
