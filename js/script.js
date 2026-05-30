@@ -996,23 +996,29 @@ function initThemeToggle() {
   const themeToggle = document.createElement('button');
   themeToggle.className = 'theme-toggle';
   themeToggle.setAttribute('aria-label', 'Toggle Dark Mode');
-  
+
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-  themeToggle.innerHTML = isDark ? '<i class="fas fa-sun fa-lg"></i>' : '<i class="fas fa-moon fa-lg"></i>';
-  
+
+  themeToggle.innerHTML = `
+    <svg width="36" height="20" viewBox="0 0 36 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="1" y="1" width="34" height="18" rx="9" fill="${isDark ? '#556B2F' : 'transparent'}" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="${isDark ? '27' : '9'}" cy="10" r="6" fill="currentColor"/>
+    </svg>
+  `;
+
   const header = document.querySelector('header');
   const cartToggle = document.querySelector('.cart-toggle');
   const mobileToggle = document.querySelector('.mobile-menu-toggle');
-  
+
   if (header && cartToggle) {
     const actionsWrap = document.createElement('div');
     actionsWrap.className = 'header-actions';
     actionsWrap.style.display = 'flex';
     actionsWrap.style.alignItems = 'center';
     actionsWrap.style.gap = '1rem';
-    
+
     header.insertBefore(actionsWrap, mobileToggle || cartToggle);
-    
+
     if (mobileToggle) actionsWrap.appendChild(mobileToggle);
     actionsWrap.appendChild(cartToggle);
     actionsWrap.appendChild(themeToggle);
@@ -1023,12 +1029,19 @@ function initThemeToggle() {
     if (currentlyDark) {
       document.documentElement.removeAttribute('data-theme');
       localStorage.setItem('verveTheme', 'light');
-      themeToggle.innerHTML = '<i class="fas fa-moon fa-lg"></i>';
     } else {
       document.documentElement.setAttribute('data-theme', 'dark');
       localStorage.setItem('verveTheme', 'dark');
-      themeToggle.innerHTML = '<i class="fas fa-sun fa-lg"></i>';
     }
+
+    const nowDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    themeToggle.setAttribute('aria-label', nowDark ? 'Switch to light mode' : 'Switch to dark mode');
+    themeToggle.innerHTML = `
+      <svg width="36" height="20" viewBox="0 0 36 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect x="1" y="1" width="34" height="18" rx="9" fill="${nowDark ? '#556B2F' : 'transparent'}" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="${nowDark ? '27' : '9'}" cy="10" r="6" fill="currentColor"/>
+      </svg>
+    `;
   });
 }
 
