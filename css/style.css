@@ -2124,6 +2124,17 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  /* FIX: Always show category info on mobile — hover doesn't exist on touch */
+  .category-info {
+    transform: translateY(0);
+    background: linear-gradient(to top, rgba(0,0,0,0.88), rgba(0,0,0,0.25));
+    padding: var(--space-md);
+  }
+
+  .category-card .category-info {
+    transform: translateY(0) !important;
+  }
+
   .hero-proof,
   .signature-grid {
     grid-template-columns: 1fr;
@@ -2149,10 +2160,48 @@ footer {
   .subpage-hero {
     min-height: 34vh;
   }
-  
+
+  /* FIX: Cart panel — full width slide-in */
   .cart-panel {
     width: 100%;
     right: -100%;
+  }
+
+  /* FIX: Cart items — tighter layout for small screens */
+  .cart-items {
+    padding: var(--space-sm);
+  }
+
+  .cart-item {
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
+  }
+
+  .cart-item-image {
+    width: 64px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+
+  /* FIX: Cart buttons — minimum 44px tap target */
+  .cart-item-btn,
+  .cart-item-remove {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* FIX: Cart footer — more breathing room */
+  .cart-footer {
+    padding: var(--space-sm);
+  }
+
+  .cart-checkout-btn {
+    padding: 1rem;
+    font-size: 1rem;
   }
   
   header nav {
@@ -2296,6 +2345,19 @@ footer {
   
   .pagination-numbers {
     flex-wrap: wrap;
+  }
+
+  /* FIX: Even tighter cart on very small screens */
+  .cart-header {
+    padding: var(--space-sm);
+  }
+
+  .cart-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .cart-item-meta {
+    font-size: 0.75rem;
   }
 }
 
