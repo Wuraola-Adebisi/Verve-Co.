@@ -43,3 +43,6 @@
 .categories-preview .category-info span{color:#fff;border-bottom:1px solid rgba(255,255,255,.9);text-shadow:none;}
 .categories-preview .category-card:hover::after{background:linear-gradient(180deg,rgba(12,12,10,.04) 15%,rgba(12,12,10,.42) 45%,rgba(12,12,10,.92) 100%);}
 @media(max-width:768px){.categories-preview .category-info{padding:1.25rem;}}
+
+/* The header is not sticky, so the homepage must not reserve space for a fixed nav. */
+body[data-page="index"] main{margin-top:0;}
