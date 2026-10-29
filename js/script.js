@@ -1046,16 +1046,7 @@ function initThemeToggle() {
 }
 
 function initHeaderScroll() {
-  const header = document.querySelector('header');
-  if (!header) return;
-  
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  }, { passive: true });
+  // The site header is intentionally part of normal document flow, not sticky.
 }
 
 function initPageTransitions() {
