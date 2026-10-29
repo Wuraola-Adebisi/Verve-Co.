@@ -136,7 +136,6 @@ body.cart-open {
   overflow: hidden;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 500;
@@ -177,14 +176,13 @@ a {
 }
 
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
+
   right: 0;
   height: var(--header-height);
   background-color: var(--white);
   border-bottom: 1px solid var(--grey-light);
-  z-index: 1000;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -194,11 +192,11 @@ header {
 }
 
 header.scrolled {
-  height: calc(var(--header-height) - 15px);
-  background-color: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
+  height: var(--header-height);
+  background-color: var(--white);
+  backdrop-filter: none;
   border-bottom-color: transparent;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
 }
 
 [data-theme="dark"] header.scrolled {
@@ -305,12 +303,10 @@ header nav a.active::after {
   color: var(--olive);
 }
 
-
 main {
   margin-top: var(--header-height);
   min-height: calc(100vh - var(--header-height));
 }
-
 
 #hero {
   min-height: calc(100vh - var(--header-height));
@@ -513,7 +509,6 @@ main {
   color: #0A0A0A;
 }
 
-
 .categories-preview {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -608,7 +603,6 @@ main {
   color: var(--black);
 }
 
-
 .category-hero {
   padding: var(--space-xl) var(--space-md);
   background-size: cover;
@@ -652,7 +646,6 @@ main {
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.95);
 }
-
 
 .product-filters {
   padding: 0 var(--space-md);
@@ -729,7 +722,6 @@ main {
   font-size: 1.35rem;
   line-height: 1;
 }
-
 
 .products-grid {
   display: grid;
@@ -1114,7 +1106,6 @@ select option,
   background-color: var(--olive-dark);
 }
 
-
 .pagination {
   display: flex;
   justify-content: center;
@@ -1164,7 +1155,6 @@ select option,
   background-color: var(--cream);
   color: var(--grey-dark);
 }
-
 
 .cart-overlay {
   position: fixed;
@@ -1671,7 +1661,6 @@ select option,
   font-style: italic;
 }
 
-
 .contact-section {
   padding: var(--space-xl) var(--space-md);
   max-width: 1200px;
@@ -1821,7 +1810,6 @@ select option,
   text-decoration: underline;
 }
 
-
 .page-navigation {
   display: flex;
   justify-content: space-between;
@@ -1965,7 +1953,6 @@ footer {
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease;
 }
-
 
 @media (max-width: 1024px) {
   #hero {
@@ -2492,7 +2479,6 @@ footer {
   transform: scale(0.97);
 }
 
-
 /* Keep desktop and mobile navigation links transparent in dark mode.
    The mobile dropdown may use a panel surface, but individual links should
    never render as separate dark tiles. */
@@ -2508,7 +2494,6 @@ footer {
 [data-theme="dark"] header nav ul {
   background: transparent;
 }
-
 
 /* Desktop navigation sits directly on the header; only the mobile dropdown
    should have its own panel surface in dark mode. */
