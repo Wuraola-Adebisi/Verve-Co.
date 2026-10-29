@@ -447,7 +447,7 @@ function openProductModal(card) {
                 </div>
                 <div class="form-group">
                   <label for="modal-note">Styling or delivery note</label>
-                  <textarea id="modal-note" class="modal-note" rows="3" placeholder="Optional note for this item"></textarea>
+                  <textarea id="modal-note" class="modal-note" rows="2" placeholder="Optional note for this item"></textarea>
                 </div>
                 <button type="submit" class="modal-add-to-cart">Add to Cart</button>
               </form>
