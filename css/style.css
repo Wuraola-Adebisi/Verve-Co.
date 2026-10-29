@@ -191,18 +191,6 @@ header {
   transition: height var(--transition-medium), background-color var(--transition-medium), backdrop-filter var(--transition-medium), box-shadow var(--transition-medium);
 }
 
-header.scrolled {
-  height: var(--header-height);
-  background-color: var(--white);
-  backdrop-filter: none;
-  border-bottom-color: transparent;
-  box-shadow: none;
-}
-
-[data-theme="dark"] header.scrolled {
-  background-color: rgba(10, 10, 10, 0.85);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-}
 
 .mobile-menu-toggle {
   display: none;
