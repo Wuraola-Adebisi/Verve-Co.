@@ -2492,3 +2492,142 @@ footer {
     box-shadow: none !important;
   }
 }
+
+/* Keep the complete product quick-view visible together in a normal desktop viewport. */
+.product-modal-overlay {
+  padding: 1rem;
+}
+
+.product-modal {
+  max-height: 94dvh;
+  overflow: hidden;
+}
+
+.modal-content {
+  height: min(86dvh, 760px);
+  min-height: 0;
+  gap: clamp(1rem, 2.5vw, 2rem);
+  overflow: hidden;
+}
+
+.modal-image {
+  min-height: 0;
+  height: 100%;
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.modal-image img {
+  max-height: calc(86dvh - 3rem);
+}
+
+.modal-details {
+  min-height: 0;
+  overflow-y: auto;
+  padding: clamp(1rem, 2.5vh, 2rem) clamp(1rem, 2vw, 1.75rem);
+}
+
+.modal-kicker {
+  margin-bottom: 0.5rem;
+  font-size: 0.72rem;
+}
+
+.modal-description {
+  font-size: 1rem;
+  line-height: 1.45;
+  margin-bottom: 0.65rem;
+}
+
+.modal-price {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.modal-form {
+  gap: 0.65rem;
+}
+
+.modal-form .form-group {
+  gap: 0.3rem;
+}
+
+.modal-form label {
+  font-size: 0.75rem;
+}
+
+.modal-form .size-select {
+  padding: 0.65rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+}
+
+.modal-form .qty-btn {
+  width: 34px;
+  height: 34px;
+}
+
+.modal-form .quantity-input {
+  width: 48px;
+  padding: 0.35rem;
+}
+
+.modal-note {
+  min-height: 54px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.875rem;
+  resize: vertical;
+}
+
+.modal-add-to-cart {
+  min-height: 48px;
+  padding: 0.75rem 1rem;
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 700px) {
+  .product-modal-overlay {
+    padding: 0.5rem;
+  }
+
+  .product-modal {
+    max-height: 96dvh;
+    overflow-y: auto;
+  }
+
+  .modal-content {
+    height: auto;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    overflow: visible;
+  }
+
+  .modal-image {
+    height: min(34dvh, 280px);
+    min-height: 0;
+  }
+
+  .modal-image img {
+    max-height: calc(34dvh - 1.5rem);
+  }
+
+  .modal-details {
+    overflow: visible;
+    padding: 1rem 1.1rem 1.25rem;
+  }
+
+  .modal-description {
+    font-size: 0.95rem;
+  }
+
+  .modal-price {
+    font-size: 1.35rem;
+  }
+
+  .modal-close {
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 34px;
+    height: 34px;
+    background: rgba(255, 255, 255, 0.92);
+  }
+}
+
