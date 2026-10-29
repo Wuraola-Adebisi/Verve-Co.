@@ -46,3 +46,80 @@
 
 /* The header is not sticky, so the homepage must not reserve space for a fixed nav. */
 body[data-page="index"] main{margin-top:0;}
+
+
+/* Restore a sticky navigation without reserving a duplicate header-height gap. */
+header{position:sticky;top:0;left:0;right:0;z-index:1000;}
+main{margin-top:0;}
+
+/* Homepage footer: editorial two-column layout with clear navigation and legal row. */
+body[data-page="index"] footer{
+  display:grid;
+  grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr);
+  column-gap:clamp(2rem,7vw,7rem);
+  row-gap:2.75rem;
+  padding:clamp(3.5rem,7vw,6rem) clamp(1.25rem,5vw,5rem) 1.5rem;
+  background:#171912;
+  color:#f8f6ef;
+}
+body[data-page="index"] .footer-brand{
+  text-align:left;
+  align-self:start;
+  margin:0;
+}
+body[data-page="index"] .footer-logo{
+  display:inline-block;
+  color:#f7f2e6;
+  font-size:clamp(2rem,3.2vw,3rem);
+  letter-spacing:-.055em;
+  line-height:1.05;
+}
+body[data-page="index"] .footer-tagline{
+  max-width:18rem;
+  margin-top:1rem;
+  color:#c0c0b4;
+  font-size:.95rem;
+}
+body[data-page="index"] .footer-nav{
+  width:100%;
+  max-width:none;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:clamp(1rem,3vw,3rem);
+  margin:0;
+}
+body[data-page="index"] .footer-section h4{
+  color:#c9d2b5;
+  margin-bottom:1.1rem;
+  font-size:.76rem;
+  letter-spacing:.14em;
+}
+body[data-page="index"] .footer-section li{margin-bottom:.7rem;}
+body[data-page="index"] .footer-section a{
+  color:#d0d0c8;
+  font-size:.88rem;
+}
+body[data-page="index"] .footer-section a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px;}
+body[data-page="index"] .footer-legal{
+  grid-column:1/-1;
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding-top:1.25rem;
+  border-top:1px solid rgba(255,255,255,.18);
+  color:#aaa99f;
+  font-size:.78rem;
+}
+body[data-page="index"] .footer-legal p{margin:0;}
+body[data-page="index"] .legal-links{gap:1.25rem;}
+body[data-page="index"] .legal-links a{color:#c0c0b4;}
+body[data-page="index"] .legal-links a:hover{color:#fff;}
+@media(max-width:700px){
+  body[data-page="index"] footer{grid-template-columns:1fr;row-gap:2rem;padding:3rem 1.25rem 1.25rem;}
+  body[data-page="index"] .footer-nav{gap:1rem;grid-template-columns:repeat(3,minmax(0,1fr));}
+  body[data-page="index"] .footer-section h4{font-size:.68rem;letter-spacing:.08em;}
+  body[data-page="index"] .footer-section a{font-size:.8rem;}
+  body[data-page="index"] .footer-legal{align-items:flex-start;flex-direction:column;gap:.75rem;}
+}
+@media(max-width:380px){
+  body[data-page="index"] .footer-nav{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:1.5rem;}
+}
