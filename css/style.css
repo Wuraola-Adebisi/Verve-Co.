@@ -2631,3 +2631,161 @@ footer {
   }
 }
 
+/* Final viewport-fit override for the product quick view: keep the image,
+   product copy, selectors and Add to Cart action visible together. */
+.product-modal-overlay {
+  padding: 0.75rem;
+}
+
+.product-modal {
+  width: min(900px, 100%);
+  max-height: 90dvh;
+  overflow: hidden;
+}
+
+.modal-content {
+  height: min(78dvh, 640px);
+  min-height: 0;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.modal-image {
+  height: 100%;
+  min-height: 0;
+  padding: 0.75rem;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.modal-details {
+  min-height: 0;
+  overflow: hidden;
+  justify-content: center;
+  padding: 1rem 1.25rem 1rem 0.5rem;
+}
+
+.modal-kicker {
+  margin-bottom: 0.35rem;
+  font-size: 0.7rem;
+}
+
+.modal-description {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 0.45rem;
+}
+
+.modal-price {
+  font-size: 1.4rem;
+  margin-bottom: 0.55rem;
+}
+
+.modal-form {
+  gap: 0.45rem;
+}
+
+.modal-form .form-group {
+  gap: 0.2rem;
+}
+
+.modal-form label {
+  font-size: 0.72rem;
+}
+
+.modal-form .size-select {
+  padding: 0.55rem 0.75rem;
+  font-size: 0.9rem;
+  border-radius: 0.4rem;
+}
+
+.modal-form .qty-btn {
+  width: 32px;
+  height: 32px;
+}
+
+.modal-form .quantity-input {
+  width: 46px;
+  padding: 0.3rem;
+}
+
+.modal-form .field-error {
+  font-size: 0.75rem;
+  min-height: 0;
+}
+
+.modal-note {
+  min-height: 42px;
+  padding: 0.4rem 0.55rem;
+  font-size: 0.8rem;
+}
+
+.modal-add-to-cart {
+  min-height: 46px;
+  padding: 0.7rem 0.8rem;
+  margin-top: 0.1rem;
+}
+
+@media (max-width: 768px) {
+  .product-modal {
+    max-height: 94dvh;
+    overflow-y: auto;
+  }
+
+  .modal-content {
+    height: auto;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    overflow: visible;
+  }
+
+  .modal-image {
+    height: 25dvh;
+    min-height: 150px;
+    max-height: 220px;
+  }
+
+  .modal-image img {
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .modal-details {
+    overflow: visible;
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  .modal-form {
+    gap: 0.35rem;
+  }
+
+  .modal-form .form-group:has(.modal-note) {
+    display: none;
+  }
+
+  .modal-add-to-cart {
+    margin-top: 0.2rem;
+  }
+}
+
+@media (max-height: 700px) and (min-width: 769px) {
+  .modal-content {
+    height: 84dvh;
+  }
+
+  .modal-details {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .modal-form .form-group:has(.modal-note) {
+    display: none;
+  }
+}
+
