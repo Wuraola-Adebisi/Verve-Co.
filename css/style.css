@@ -2491,3 +2491,20 @@ footer {
 .add-to-cart:active {
   transform: scale(0.97);
 }
+
+
+/* Keep desktop and mobile navigation links transparent in dark mode.
+   The mobile dropdown may use a panel surface, but individual links should
+   never render as separate dark tiles. */
+[data-theme="dark"] header nav a,
+[data-theme="dark"] header nav a:hover,
+[data-theme="dark"] header nav a:focus-visible,
+[data-theme="dark"] header nav a.active {
+  background: transparent !important;
+  box-shadow: none;
+}
+
+[data-theme="dark"] header nav li,
+[data-theme="dark"] header nav ul {
+  background: transparent;
+}
