@@ -2508,3 +2508,14 @@ footer {
 [data-theme="dark"] header nav ul {
   background: transparent;
 }
+
+
+/* Desktop navigation sits directly on the header; only the mobile dropdown
+   should have its own panel surface in dark mode. */
+@media (min-width: 769px) {
+  [data-theme="dark"] header nav {
+    background: transparent !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
